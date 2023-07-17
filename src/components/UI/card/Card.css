@@ -1,0 +1,8 @@
+.cardexpenses{
+    border-radius: 12px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+    width: 810px;
+    background-color: #1F1F1F;
+    margin-left: 330px;
+    min-height: 30px;
+}

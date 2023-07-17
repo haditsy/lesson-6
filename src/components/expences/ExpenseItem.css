@@ -1,0 +1,51 @@
+.cardexpense-item{
+    margin-left: 16px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #4B4B4B;
+    border: 1px solid white;
+    padding: 0.5rem;
+    border-radius: 15px;
+    width: 748px;
+    height: 104px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.expense-date{
+    width: 82px;
+    height: 80px;
+    background-color: #2A2A2A;
+    text-align: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-top: 12px;
+    margin-left: 16px;
+}
+
+@media(min-width:580px) {
+    .expense-item__description{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex: 1;
+        display: flex;
+        margin-left: 14px;
+    }
+
+    .expense-item__description h2{
+        font-size: 1.25rem;
+        color: white;
+    }
+
+    .expense-item__price{
+        font-size: 1.25rem;
+        padding: 0.5rem 1.5rem;
+        margin-left: 250px;
+        min-width: 50px;
+    }
+}
+
