@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Button from "../UI/button/Button";
-import FormInput from "../UI/input/FormInput";
-import './ExpenseForm.css'
+import FormInput from "../../FormInput";
+// import './ExpenseForm.css'
+import { styled } from "styled-components";
 
 const ExpenceForm = ({ onCloseForm, onAddNewExpence }) => {
   const [title, setTitle] = useState("");
@@ -48,14 +49,14 @@ const ExpenceForm = ({ onCloseForm, onAddNewExpence }) => {
   return (
     <form onSubmit={submitHandler}>
       <div className="container">
-        <FormInput
+        <StyledInputText
           className="input_text"
           onChange={titleChangeHandler}
           label={"Заголовок"}
           inputType="text"
           value={title}
         />
-        <FormInput
+        <StyledInputNumber
           className="input_number"
           onChange={amountChangeHandler}
           label={"Количество"}
@@ -63,7 +64,7 @@ const ExpenceForm = ({ onCloseForm, onAddNewExpence }) => {
           value={amount}
         />
       </div>
-      <FormInput
+      <StyledInputDate
         className="input_date"
         onChange={dateChangeHandler}
         label={"Датировать"}
@@ -81,5 +82,32 @@ const ExpenceForm = ({ onCloseForm, onAddNewExpence }) => {
     </form>
   );
 };
+
+const StyledInputText = styled(FormInput)`
+width: 340px;
+height: 40px;
+margin-top: 8px;
+border-radius: 10px;
+border: none;
+margin-left: 40px;
+`
+
+const StyledInputNumber = styled(FormInput)`
+width: 340px;
+height: 40px;
+margin-top: 8px;
+border-radius: 10px;
+border: none;
+margin-left: 20px;
+`
+
+const StyledInputDate = styled(FormInput)`
+width: 340px;
+height: 40px;
+margin-top: 8px;
+border-radius: 10px;
+border: none;
+margin-left: 40px;
+`
 
 export default ExpenceForm;

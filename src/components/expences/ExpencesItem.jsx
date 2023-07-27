@@ -11,7 +11,7 @@ const ExpencesItem = ({date, title, amount, onDeleteExpense, id}) => {
         <div className='expense-item__description'> 
             <h2>{title}</h2>
             <div className='expense-item__price'>${amount}</div>{''}
-            <button style={{marginLeft: '1rem', border: '1px solid white'}} onDeleteExpense={() => {onDeleteExpense(id)}}>Delete</button>
+            <button style={{marginLeft: '1rem', border: '1px solid white'}} onClick={() => {onDeleteExpense(id)}}>Delete</button>
         </div>
     </Card>
   )

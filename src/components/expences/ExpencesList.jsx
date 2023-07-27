@@ -59,9 +59,9 @@ return(
 
     {expenses.length > 0 &&  (<ul className='expenses-list'>
          {
-             expenses.map((expense) => {
+             expenses.map((expense, ) => {
                  return <ExpencesItem
-                onDeleteExpense={onDeleteExpense}
+                  onDeleteExpense={onDeleteExpense}
                   date={expense.date}
                   title={expense.title}
                   id={expense.id}
