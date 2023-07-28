@@ -1,6 +1,7 @@
 import React from 'react'
+import { styled } from 'styled-components'
 import ExpencesItem from './ExpencesItem'
-import './ExpensesList.css'
+// import './ExpensesList.css'
 
 const ExpencesList = ({expenses = [], onDeleteExpense}) => {
 
@@ -54,10 +55,10 @@ const ExpencesList = ({expenses = [], onDeleteExpense}) => {
 return( 
   <div>
     {expenses.length === 0 && (
-      <h1 className='expenses-list__fallback'>No Expenses</h1>
+      <StyledListFallback className='expenses-list__fallback'>No Expenses</StyledListFallback>
     )}
 
-    {expenses.length > 0 &&  (<ul className='expenses-list'>
+    {expenses.length > 0 &&  (<StyledExpenseList className='expenses-list'>
          {
              expenses.map((expense, ) => {
                  return <ExpencesItem
@@ -69,11 +70,19 @@ return(
                  />
              })
         }
-     </ul>)}
+     </StyledExpenseList>)}
   </div>
 )
 }
 
+const StyledExpenseList = styled('ul')`
+    list-style: none;
+    padding: 0;
+`
 
+const StyledListFallback = styled('h1')`
+   color: white;
+    text-align: center;
+`
 
 export default ExpencesList

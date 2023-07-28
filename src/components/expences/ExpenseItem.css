@@ -14,18 +14,6 @@
     margin-top: 20px;
 }
 
-.expense-date{
-    width: 82px;
-    height: 80px;
-    background-color: #2A2A2A;
-    text-align: center;
-    align-items: center;
-    border: 1px solid white;
-    border-radius: 10px;
-    margin-top: 12px;
-    margin-left: 16px;
-}
-
 @media(min-width:580px) {
     .expense-item__description{
         flex-direction: row;

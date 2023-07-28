@@ -72,9 +72,9 @@ const ExpenceForm = ({ onCloseForm, onAddNewExpence }) => {
         value={date}
       />
       <div className="buttons">
-        <Button className="button_cancel" type="button" onClick={onCloseForm}>
+        <StyledButtonCancel className="button_cancel" type="button" onClick={onCloseForm}>
           Отмена
-        </Button>
+        </StyledButtonCancel>
         <Button disabled={!isFormValid}  className="button_add" type="submit">
           Добавить расход
         </Button>
@@ -108,6 +108,10 @@ margin-top: 8px;
 border-radius: 10px;
 border: none;
 margin-left: 40px;
+`
+
+const StyledButtonCancel = styled('button')`
+  margin-left: 450px;
 `
 
 export default ExpenceForm;

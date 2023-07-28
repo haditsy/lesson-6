@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import ExpencesList from "./ExpencesList";
-import "./Expenses.css";
-// import Card from "../UI/car/Card";d
+// import "./Expenses.css";
 import Chart from "../chart/Chart";
 import ExpensesFilter from "../expensesFilter/ExpensesFilter";
+import { styled } from "styled-components";
 
 const Expences = ({ expenses = [], onDeleteExpense }) => {
   const [selectedYear, setSelectedYear] = useState("");
@@ -20,7 +20,7 @@ const Expences = ({ expenses = [], onDeleteExpense }) => {
   console.log(filteredExpense);
 
   return (
-    <div className="expenses">
+    <StyledExpences className="expenses">
       <ExpensesFilter
         selectedYear={selectedYear}
         onChange={yearChangeHandler}
@@ -30,8 +30,16 @@ const Expences = ({ expenses = [], onDeleteExpense }) => {
         expenses={filteredExpense}
         onDeleteExpense={onDeleteExpense}
       />
-    </div>
+    </StyledExpences>
   );
 };
+
+const StyledExpences = styled('div')`
+  width: 820px;
+    min-height: 100px;
+    background-color: #000000;
+    border-radius: 12px;
+    margin-left: 330px;
+`
 
 export default Expences;

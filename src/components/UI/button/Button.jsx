@@ -20,6 +20,7 @@ const StyledButtons = styled('button')`
     &:disabled{
       background-color: grey;
       cursor: not-allowed;
+      margin-left: 600px;
     }
 `
 export default Button

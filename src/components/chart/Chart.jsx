@@ -1,7 +1,8 @@
 import React from 'react'
-import './Chart.css'
+// import './Chart.css'
 import './ChartBar'
 import ChartBar from './ChartBar'
+import { styled } from 'styled-components'
 
 const Chart = ({items}) => {
     const maximumPrice = 1000
@@ -69,14 +70,26 @@ const Chart = ({items}) => {
 
 
   return (
-    <div className='chart'>
+    <StyledChart className='chart'>
         {months.map((item) => {
             return (
                 <ChartBar key={item.label} label={item.label} currentPrice={item.currentPrice} maximumPrice={maximumPrice}/>
             )
         })}
-    </div>
+    </StyledChart>
   )
 }
+
+const StyledChart = styled('div')`
+  width: 750px;
+    margin-left: 20px;
+    padding: 1rem;
+    border-radius: 12px;
+    background-color: #f8dfff;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    height: 10rem;
+`
 
 export default Chart
